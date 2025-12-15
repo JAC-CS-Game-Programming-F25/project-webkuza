@@ -1,6 +1,5 @@
 # 2d side scroller beat-em-up
 
-
 ## ✒️ Description
 
 In this side scrolling beat-em-up inspired by the yakuza games, the player starts at the leftmost point in the level and must progress their way forwards by defeating the enemies.
@@ -69,7 +68,7 @@ mermaid.live was used to generate state and class diagrams
 
 #### 🖼️ Images
 
-I intend to ai generate most of my pixel art using tools like chatgpt.com
+I intend to ai generate most of my pixel art using tools like chatgpt.com and perchance.org
 
 #### ✏️ Fonts
 
@@ -80,3 +79,5 @@ https://www.dafont.com/edo-sz.font
 
 I intend on downloading sounds from youtube to mp3 converters as well as
 freesound.org
+
+https://www.youtube.com/watch?v=26oo5Guc6kU

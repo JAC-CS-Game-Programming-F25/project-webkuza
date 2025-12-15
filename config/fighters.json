@@ -38,7 +38,7 @@
                         "sprite": "kiryu_light1_2",
                         "hitboxes": [
                             {
-                                "damage": 1,
+                                "damage": 5,
                                 "lifetime": 0.1
                             }
                         ],
@@ -161,7 +161,7 @@
                         "sprite": "thug_attack_1",
                         "hitboxes": [
                             {
-                                "damage": 1,
+                                "damage": 5,
                                 "lifetime": 0.1
                             }
                         ],

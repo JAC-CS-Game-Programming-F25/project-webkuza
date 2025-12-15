@@ -8,7 +8,8 @@
                 "frames": [
                     {
                         "sprite": "kiryu_idle",
-                        "hitboxes": []
+                        "hitboxes": [],
+                        "followUps": []
                     }
                 ]
             }

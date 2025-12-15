@@ -21,7 +21,7 @@ export default class Fighter extends GameEntity
     {
         this.stateMachine = new StateMachine();
         Object.keys(this.moveset).forEach(key => {
-            this.stateMachine.add(key, new InterpretMoveState(this, this.moveset.idle))
+            this.stateMachine.add(key, new InterpretMoveState(this, this.moveset[key]));
         });
     }
 }

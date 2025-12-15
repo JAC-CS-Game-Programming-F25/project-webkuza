@@ -1,0 +1,17 @@
+{
+    "Player": {
+        "Width": 64,
+        "Height": 64,
+        "Health": 100,
+        "Moveset": {
+            "idle": {
+                "frames": [
+                    {
+                        "sprite": "kiryu_idle",
+                        "hitboxes": []
+                    }
+                ]
+            }
+        }
+    }
+}

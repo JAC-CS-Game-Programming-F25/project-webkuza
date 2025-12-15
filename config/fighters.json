@@ -1,9 +1,9 @@
 {
     "Player": {
-        "Width": 64,
-        "Height": 64,
-        "Health": 100,
-        "Moveset": {
+        "width": 32,
+        "height": 64,
+        "health": 100,
+        "moveset": {
             "idle": {
                 "frames": [
                     {

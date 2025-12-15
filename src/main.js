@@ -19,7 +19,8 @@ import {
 	images,
 	timer,
 	sounds,
-	stateMachine,
+	stateStack,
+	levelDefinition,
 } from './globals.js';
 import PlayState from './states/PlayState.js';
 import GameOverState from './states/GameOverState.js';
@@ -39,23 +40,18 @@ const {
 	images: imageDefinitions,
 	fonts: fontDefinitions,
 	sounds: soundDefinitions,
-} = await fetch('./src/config.json').then((response) => response.json());
+} = await fetch('./config/assets.json').then((response) => response.json());
 
 // Load all the assets from their definitions.
 images.load(imageDefinitions);
-fonts.load(fontDefinitions);
-sounds.load(soundDefinitions);
+//fonts.load(fontDefinitions);
+//sounds.load(soundDefinitions);
 
 // Add all the states to the state machine.
-stateMachine.add(GameStateName.TitleScreen, new TitleScreenState());
-stateMachine.add(GameStateName.GameOver, new GameOverState());
-stateMachine.add(GameStateName.Victory, new VictoryState());
-stateMachine.add(GameStateName.Play, new PlayState());
-
-stateMachine.change(GameStateName.Play);
+stateStack.push(new PlayState(levelDefinition.test));
 
 const game = new Game(
-	stateMachine,
+	stateStack,
 	context,
 	timer,
 	canvas.width,

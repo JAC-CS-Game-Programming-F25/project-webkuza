@@ -8,7 +8,7 @@
         },
         {
             "name": "test_level",
-            "path": "./assets/images/fighter/test_level.png",
+            "path": "./assets/images/levels/test_level.png",
             "width": 960,
             "height": 180
         }

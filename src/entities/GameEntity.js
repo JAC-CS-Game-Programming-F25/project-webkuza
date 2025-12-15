@@ -17,7 +17,7 @@ export default class GameEntity {
 		this.position = new Vector(x, y);
 		this.dimensions = new Vector(width, height);
 		this.velocity = new Vector(0, 0);
-		this.isOnGround = false;
+		this.currentFrame = 0;
         this.sprites = [];
 	}
 
@@ -31,7 +31,14 @@ export default class GameEntity {
 	 * Renders the entity.
 	 * @param {CanvasRenderingContext2D} context - The rendering context.
 	 */
-	render(context) {}
+	render() {
+		if(this.currentFrame > this.sprites.length)
+		{
+			console.log("frame index error");
+			this.sprites[0].render(this.position.x, this.position.y);
+		}
+		this.sprites[this.currentFrame].render(this.position.x, this.position.y);
+	}
 
 	/**
 	 * Checks if this entity collides with another entity.

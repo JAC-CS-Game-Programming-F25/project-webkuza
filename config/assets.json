@@ -7,6 +7,36 @@
             "height": 64
         },
         {
+            "name": "kiryu_light1_1",
+            "path": "./assets/images/fighter/kiryu_light1_1.png",
+            "width": 64,
+            "height": 64
+        },
+        {
+            "name": "kiryu_light1_2",
+            "path": "./assets/images/fighter/kiryu_light1_2.png",
+            "width": 64,
+            "height": 64
+        },
+        {
+            "name": "kiryu_light1_3",
+            "path": "./assets/images/fighter/kiryu_light1_1.png",
+            "width": 64,
+            "height": 64
+        },
+        {
+            "name": "kiryu_walk_1",
+            "path": "./assets/images/fighter/kiryu_idle.png",
+            "width": 64,
+            "height": 64
+        },
+        {
+            "name": "kiryu_walk_2",
+            "path": "./assets/images/fighter/kiryu_idle.png",
+            "width": 64,
+            "height": 64
+        },
+        {
             "name": "test_level",
             "path": "./assets/images/levels/test_level.png",
             "width": 960,

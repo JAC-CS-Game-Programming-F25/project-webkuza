@@ -5,14 +5,92 @@
         "health": 100,
         "moveset": {
             "idle": {
+                "duration": 0,
                 "frames": [
                     {
                         "sprite": "kiryu_idle",
                         "hitboxes": [],
-                        "duration": 0
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
                     }
                 ],
                 "followUps": {
+                    "nothing": "idle",
+                    "E": "light1",
+                    "A": "walk",
+                    "D": "walk"
+                }
+            },
+            "light1": {
+                "duration": 0.3,
+                "frames": [
+                    {
+                        "sprite": "kiryu_light1_1",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "kiryu_light1_2",
+                        "hitboxes": [
+                            {
+                                "damage": 1,
+                                "lifetime": 0.1
+                            }
+                        ],
+                        "transform": {
+                            "x": 1,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "kiryu_light1_2",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "kiryu_light1_3",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                ],
+                "followUps": {
+                    "nothing": "idle"
+                }
+            },
+            "walk": {
+                "frames": [
+                    {
+                        "sprite": "kiryu_walk_1",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 1,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "kiryu_walk_2",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 1,
+                            "y": 0
+                        }
+                    }
+                ],
+                "followUps": {
+                    "nothing": "idle",
+                    "D": "walk",
+                    "A": "walk",
                     "E": "light1"
                 }
             }

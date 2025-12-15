@@ -2,6 +2,7 @@
 
 import { getCollisionDirection, isAABBCollision } from '../../lib/Collision.js';
 import Vector from '../../lib/Vector.js';
+import Direction from '../enums/Direction.js';
 
 /**
  * Represents a game entity with position, dimensions, and velocity.
@@ -18,14 +19,18 @@ export default class GameEntity {
 		this.dimensions = new Vector(width, height);
 		this.velocity = new Vector(0, 0);
 		this.currentFrame = 0;
+		this.currentAnimation = 0;
         this.sprites = [];
+		this.stateMachine = null;
+		this.direction = Direction.Right;
 	}
 
 	/**
 	 * Updates the entity state.
 	 * @param {number} dt - Delta time.
 	 */
-	update(dt) {}
+	update(dt) {
+	}
 
 	/**
 	 * Renders the entity.

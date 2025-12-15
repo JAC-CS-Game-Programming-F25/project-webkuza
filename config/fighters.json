@@ -1,6 +1,6 @@
 {
     "Player": {
-        "width": 32,
+        "width": 64,
         "height": 64,
         "health": 100,
         "moveset": {
@@ -9,9 +9,12 @@
                     {
                         "sprite": "kiryu_idle",
                         "hitboxes": [],
-                        "followUps": []
+                        "duration": 0
                     }
-                ]
+                ],
+                "followUps": {
+                    "E": "light1"
+                }
             }
         }
     }

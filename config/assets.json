@@ -3,7 +3,7 @@
         {
             "name": "kiryu_idle",
             "path": "./assets/images/fighter/kiryu_idle.png",
-            "width": 32,
+            "width": 64,
             "height": 64
         },
         {

@@ -1,8 +1,10 @@
 {
     "test": {
         "sprite": "test_level",
-        "groundY": 120,
-        "width": 960,
-        "enemies": []
+        "groundY": 160,
+        "width": 320,
+        "enemies": [
+            "Thug"
+        ]
     }
 }

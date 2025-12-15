@@ -3,6 +3,7 @@ import Sprite from "../../../lib/Sprite.js"
 import { images, input } from "../../globals.js";
 import Fighter from "../../entities/Fighter.js";
 import Animation from "../../../lib/Animation.js";
+import Direction from "../../enums/Direction.js";
 
 export default class InterpretMoveState extends State
 {
@@ -48,7 +49,12 @@ export default class InterpretMoveState extends State
 
     applyFrameProperties()
     {
-        this.fighter.position.x += this.move.frames[this.fighter.currentFrame].transform.x;
+        if(this.fighter.direction == Direction.Right){
+            this.fighter.position.x += this.move.frames[this.fighter.currentFrame].transform.x;
+        } else
+        {
+            this.fighter.position.x -= this.move.frames[this.fighter.currentFrame].transform.x;
+        }
     }
 
     exit()
@@ -62,7 +68,7 @@ export default class InterpretMoveState extends State
     update(dt)
     {
         let previousInput = this.input;
-        this.input = Object.keys(input.keys).find((key) => input.keys[key] === true);
+        this.input = Object.keys(this.fighter.inputSource.keys).find((key) => this.fighter.inputSource.keys[key] === true);
         if(this.input === undefined)
         {
             this.input = previousInput;

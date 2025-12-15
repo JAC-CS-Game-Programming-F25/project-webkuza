@@ -95,5 +95,110 @@
                 }
             }
         }
+    },
+    "Thug": {
+        "width": 64,
+        "height": 64,
+        "health": 100,
+        "moveset": {
+            "idle": {
+                "duration": 0,
+                "frames": [
+                    {
+                        "sprite": "thug_idle",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                ],
+                "followUps": {
+                    "nothing": "idle",
+                    "A": "walk",
+                    "D": "walk",
+                    "E": "attack"
+                }
+            },
+            "walk": {
+                "frames": [
+                    {
+                        "sprite": "thug_walk_1",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0.5,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "thug_walk_2",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0.5,
+                            "y": 0
+                        }
+                    }
+                ],
+                "followUps": {
+                    "nothing": "idle",
+                    "D": "walk",
+                    "A": "walk",
+                    "E": "attack"
+                }
+            },
+            "attack": {
+                "duration": 0.3,
+                "frames": [
+                    {
+                        "sprite": "thug_attack_1",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "thug_attack_1",
+                        "hitboxes": [
+                            {
+                                "damage": 1,
+                                "lifetime": 0.1
+                            }
+                        ],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "thug_attack_2",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "thug_attack_2",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    {
+                        "sprite": "thug_attack_3",
+                        "hitboxes": [],
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                ],
+                "followUps": {
+                    "nothing": "idle"
+                }
+            }
+        }
     }
 }

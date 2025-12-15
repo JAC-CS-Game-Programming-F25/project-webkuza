@@ -45,7 +45,7 @@ const {
 // Load all the assets from their definitions.
 images.load(imageDefinitions);
 //fonts.load(fontDefinitions);
-//sounds.load(soundDefinitions);
+sounds.load(soundDefinitions);
 
 // Add all the states to the state machine.
 stateStack.push(new PlayState(levelDefinition.test));

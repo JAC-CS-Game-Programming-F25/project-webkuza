@@ -23,6 +23,7 @@ export default class GameEntity {
         this.sprites = [];
 		this.stateMachine = null;
 		this.direction = Direction.Right;
+		this.renderOffset = 0;
 	}
 
 	/**
@@ -42,7 +43,13 @@ export default class GameEntity {
 			console.log("frame index error");
 			this.sprites[0].render(this.position.x, this.position.y);
 		}
-		this.sprites[this.currentFrame].render(this.position.x, this.position.y);
+		if(this.direction == Direction.Right){
+			this.sprites[this.currentFrame].render(this.position.x + this.renderOffset, this.position.y);
+		}
+		else
+		{
+			this.sprites[this.currentFrame].render(this.position.x + this.renderOffset, this.position.y, { x: -1, y: 1});
+		}
 	}
 
 	/**

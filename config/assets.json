@@ -39,8 +39,53 @@
         {
             "name": "test_level",
             "path": "./assets/images/levels/test_level.png",
-            "width": 960,
+            "width": 320,
             "height": 180
+        },
+        {
+            "name": "thug_idle",
+            "path": "./assets/images/fighter/thug_idle.png",
+            "wifth": 64,
+            "height": 64
+        },
+        {
+            "name": "thug_walk_1",
+            "path": "./assets/images/fighter/thug_idle.png",
+            "wifth": 64,
+            "height": 64
+        },
+        {
+            "name": "thug_walk_2",
+            "path": "./assets/images/fighter/thug_idle.png",
+            "wifth": 64,
+            "height": 64
+        },
+        {
+            "name": "thug_attack_1",
+            "path": "./assets/images/fighter/thug_attack_1.png",
+            "wifth": 64,
+            "height": 64
+        },
+        {
+            "name": "thug_attack_2",
+            "path": "./assets/images/fighter/thug_attack_2.png",
+            "wifth": 64,
+            "height": 64
+        },
+        {
+            "name": "thug_attack_3",
+            "path": "./assets/images/fighter/thug_attack_1.png",
+            "wifth": 64,
+            "height": 64
+        }
+    ],
+    "sounds": [
+        {
+            "name": "battle-loop",
+            "path": "./assets/sounds/music.mp3",
+            "size": 1,
+            "volume": 0.1,
+            "loop": true
         }
     ]
 }

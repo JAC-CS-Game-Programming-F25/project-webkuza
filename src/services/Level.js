@@ -1,7 +1,6 @@
 import Sprite from "../../lib/Sprite.js";
 import Fighter from "../entities/Fighter.js";
-import { CANVAS_HEIGHT, fighterFactory, images } from "../globals.js";
-import FighterFactory from "./FighterFactory.js";
+import { CANVAS_HEIGHT, fighterFactory, images, sounds } from "../globals.js";
 
 export default class Level
 {
@@ -14,6 +13,7 @@ export default class Level
         this.width = definition.width;
         this.ground = definition.groundY;
         this.initializeEntities();
+        sounds.play("battle-loop");
     }
 
     update(dt)
@@ -45,7 +45,11 @@ export default class Level
     initializeEntities()
     {
         this.entities = [fighterFactory.CreateFighter("Player", Level.PLAYER_SPAWN, this.ground - Fighter.FIGHTER_HEIGHT)];
-        console.log(this.entities[0]);
+        this.enemiesDefinition.forEach((enemy) => {
+            let result = fighterFactory.CreateFighter(enemy, Level.PLAYER_SPAWN, this.ground - Fighter.FIGHTER_HEIGHT)
+            result.inputSource.player = this.entities[0];
+            this.entities.push(result);
+        });
         this.objects = [];
     }
 }
